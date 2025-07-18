@@ -28,6 +28,9 @@
       width: 250px;
       height: 445px;
       margin-right: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border-radius: 12px;
+      overflow: hidden;
     }
     video {
       width: 100%;
@@ -38,86 +41,109 @@
     .swiper-button-next, .swiper-button-prev {
       color: #F2F2F2;
     }
+    .overlay-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: rgba(0,0,0,0.3);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .overlay-play img {
+      width: 30px;
+      height: 30px;
+      filter: drop-shadow(0 0 3px #000);
+    }
+    .controls {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      display: none;
+      flex-direction: column;
+      gap: 8px;
+      z-index: 2;
+    }
+    .control-button {
+      width: 36px;
+      height: 36px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .control-button img {
+      width: 18px;
+      height: 18px;
+      filter: brightness(0) invert(1);
+    }
   </style>
 </head>
 <body>
 
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="video-container">
-          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Vestido de noiva com véu.mp4" autoplay muted playsinline controls></video>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="video-container">
-          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Bolo Isabelle.mp4" autoplay muted playsinline controls></video>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="video-container">
-          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Por trás do balcão - RMP.mp4" autoplay muted playsinline controls></video>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="video-container">
-          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Real Time - Planeta Lavras Novas.mp4" autoplay muted playsinline controls></video>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="video-container">
-          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Leonara - Liége.mp4" autoplay muted playsinline controls></video>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="video-container">
-          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Vestido de noiva princesa com luvas.mp4" autoplay muted playsinline controls></video>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="video-container">
-          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Post 11 - RMP.mp4" autoplay muted playsinline controls></video>
-        </div>
-      </div>
-
-      <div class="swiper-slide">
-        <div class="video-container">
-          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Bruno e Marrone - Festival do Trabalhador.mp4" autoplay muted playsinline controls></video>
-        </div>
-      </div>
-    </div>
-
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <!-- 8 vídeos em ordem -->
+    <div class="swiper-slide"><div class="video-container"><video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Vestido de noiva com véu.mp4" autoplay muted playsinline loop></video><div class="overlay-play"><img src="https://img.icons8.com/ios-filled/50/ffffff/play.png"></div><div class="controls"><div class="control-button play-pause"><img src="https://img.icons8.com/ios-filled/50/ffffff/pause.png"></div><div class="control-button mute-unmute"><img src="https://img.icons8.com/ios-filled/50/ffffff/high-volume.png"></div></div></div></div>
+    <div class="swiper-slide"><div class="video-container"><video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Bolo Isabelle.mp4" autoplay muted playsinline loop></video><div class="overlay-play"><img src="https://img.icons8.com/ios-filled/50/ffffff/play.png"></div><div class="controls"><div class="control-button play-pause"><img src="https://img.icons8.com/ios-filled/50/ffffff/pause.png"></div><div class="control-button mute-unmute"><img src="https://img.icons8.com/ios-filled/50/ffffff/high-volume.png"></div></div></div></div>
+    <div class="swiper-slide"><div class="video-container"><video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Por trás do balcão - RMP.mp4" autoplay muted playsinline loop></video><div class="overlay-play"><img src="https://img.icons8.com/ios-filled/50/ffffff/play.png"></div><div class="controls"><div class="control-button play-pause"><img src="https://img.icons8.com/ios-filled/50/ffffff/pause.png"></div><div class="control-button mute-unmute"><img src="https://img.icons8.com/ios-filled/50/ffffff/high-volume.png"></div></div></div></div>
+    <div class="swiper-slide"><div class="video-container"><video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Real Time - Planeta Lavras Novas.mp4" autoplay muted playsinline loop></video><div class="overlay-play"><img src="https://img.icons8.com/ios-filled/50/ffffff/play.png"></div><div class="controls"><div class="control-button play-pause"><img src="https://img.icons8.com/ios-filled/50/ffffff/pause.png"></div><div class="control-button mute-unmute"><img src="https://img.icons8.com/ios-filled/50/ffffff/high-volume.png"></div></div></div></div>
+    <div class="swiper-slide"><div class="video-container"><video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Leonara - Liége.mp4" autoplay muted playsinline loop></video><div class="overlay-play"><img src="https://img.icons8.com/ios-filled/50/ffffff/play.png"></div><div class="controls"><div class="control-button play-pause"><img src="https://img.icons8.com/ios-filled/50/ffffff/pause.png"></div><div class="control-button mute-unmute"><img src="https://img.icons8.com/ios-filled/50/ffffff/high-volume.png"></div></div></div></div>
+    <div class="swiper-slide"><div class="video-container"><video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Vestido de noiva princesa com luvas.mp4" autoplay muted playsinline loop></video><div class="overlay-play"><img src="https://img.icons8.com/ios-filled/50/ffffff/play.png"></div><div class="controls"><div class="control-button play-pause"><img src="https://img.icons8.com/ios-filled/50/ffffff/pause.png"></div><div class="control-button mute-unmute"><img src="https://img.icons8.com/ios-filled/50/ffffff/high-volume.png"></div></div></div></div>
+    <div class="swiper-slide"><div class="video-container"><video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Post 11 - RMP.mp4" autoplay muted playsinline loop></video><div class="overlay-play"><img src="https://img.icons8.com/ios-filled/50/ffffff/play.png"></div><div class="controls"><div class="control-button play-pause"><img src="https://img.icons8.com/ios-filled/50/ffffff/pause.png"></div><div class="control-button mute-unmute"><img src="https://img.icons8.com/ios-filled/50/ffffff/high-volume.png"></div></div></div></div>
+    <div class="swiper-slide"><div class="video-container"><video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Bruno e Marrone - Festival do Trabalhador.mp4" autoplay muted playsinline loop></video><div class="overlay-play"><img src="https://img.icons8.com/ios-filled/50/ffffff/play.png"></div><div class="controls"><div class="control-button play-pause"><img src="https://img.icons8.com/ios-filled/50/ffffff/pause.png"></div><div class="control-button mute-unmute"><img src="https://img.icons8.com/ios-filled/50/ffffff/high-volume.png"></div></div></div></div>
   </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 'auto',
+  spaceBetween: 10,
+  navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+});
+document.querySelectorAll('.video-container').forEach(container => {
+  const video = container.querySelector('video');
+  const overlay = container.querySelector('.overlay-play');
+  const controls = container.querySelector('.controls');
+  const playPause = container.querySelector('.play-pause img');
+  const muteUnmute = container.querySelector('.mute-unmute img');
 
-    document.querySelectorAll('video').forEach(video => {
-      video.addEventListener('click', function() {
-        if (video.muted) {
-          video.muted = false;
-          video.play();
-        }
-      });
-    });
-  </script>
+  overlay.addEventListener('click', () => {
+    video.muted = false;
+    video.play();
+    overlay.style.display = 'none';
+    controls.style.display = 'flex';
+  });
 
+  container.querySelector('.play-pause').addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+      playPause.src = 'https://img.icons8.com/ios-filled/50/ffffff/pause.png';
+    } else {
+      video.pause();
+      playPause.src = 'https://img.icons8.com/ios-filled/50/ffffff/play.png';
+    }
+  });
+
+  container.querySelector('.mute-unmute').addEventListener('click', () => {
+    video.muted = !video.muted;
+    muteUnmute.src = video.muted
+      ? 'https://img.icons8.com/ios-filled/50/ffffff/mute.png'
+      : 'https://img.icons8.com/ios-filled/50/ffffff/high-volume.png';
+  });
+});
+</script>
 </body>
 </html>
 
