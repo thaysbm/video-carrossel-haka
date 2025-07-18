@@ -42,72 +42,82 @@
 </head>
 <body>
 
-<div class="swiper">
-  <div class="swiper-wrapper">
-    <!-- SLIDES -->
-    <div class="swiper-slide">
-      <div class="video-container">
-        <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Vestido de noiva com véu.mp4" autoplay muted playsinline controls></video>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="video-container">
+          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Vestido de noiva com véu.mp4" autoplay muted playsinline controls></video>
+        </div>
       </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="video-container">
-        <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Bolo Isabelle.mp4" autoplay muted playsinline controls></video>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="video-container">
-        <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Por trás do balcão - RMP.mp4" autoplay muted playsinline controls></video>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="video-container">
-        <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Real Time - Planeta Lavras Novas.mp4" autoplay muted playsinline controls></video>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="video-container">
-        <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Leonara - Liége.mp4" autoplay muted playsinline controls></video>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="video-container">
-        <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Vestido de noiva princesa com luvas.mp4" autoplay muted playsinline controls></video>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="video-container">
-        <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Post 11 - RMP.mp4" autoplay muted playsinline controls></video>
-      </div>
-    </div>
-    <div class="swiper-slide">
-      <div class="video-container">
-        <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Bruno e Marrone - Festival do Trabalhador.mp4" autoplay muted playsinline controls></video>
-      </div>
-    </div>
-  </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 'auto',
-  spaceBetween: 10,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-document.querySelectorAll('video').forEach(video => {
-  video.addEventListener('click', function() {
-    if (video.muted) {
-      video.muted = false;
-      video.play();
-    }
-  });
-});
-</script>
+      <div class="swiper-slide">
+        <div class="video-container">
+          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Bolo Isabelle.mp4" autoplay muted playsinline controls></video>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="video-container">
+          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Por trás do balcão - RMP.mp4" autoplay muted playsinline controls></video>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="video-container">
+          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Real Time - Planeta Lavras Novas.mp4" autoplay muted playsinline controls></video>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="video-container">
+          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Leonara - Liége.mp4" autoplay muted playsinline controls></video>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="video-container">
+          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Vestido de noiva princesa com luvas.mp4" autoplay muted playsinline controls></video>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="video-container">
+          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Post 11 - RMP.mp4" autoplay muted playsinline controls></video>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="video-container">
+          <video src="https://pub-eb964b15b1c3440486cacb3e19384956.r2.dev/Bruno e Marrone - Festival do Trabalhador.mp4" autoplay muted playsinline controls></video>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+
+    document.querySelectorAll('video').forEach(video => {
+      video.addEventListener('click', function() {
+        if (video.muted) {
+          video.muted = false;
+          video.play();
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
+
