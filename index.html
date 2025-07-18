@@ -33,8 +33,11 @@
       overflow: hidden;
       transition: transform 0.4s ease;
     }
-    .video-container:hover {
-      transform: scale(1.03);
+    /* Animação de zoom out (encolher) ao passar o mouse (apenas desktop) */
+    @media (min-width: 769px) {
+      .video-container:hover {
+        transform: scale(0.97);
+      }
     }
     video {
       width: 100%;
@@ -166,5 +169,4 @@ document.querySelectorAll('.video-container').forEach(container => {
 </script>
 </body>
 </html>
-
 
